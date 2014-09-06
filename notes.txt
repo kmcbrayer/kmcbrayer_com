@@ -1,13 +1,14 @@
-1. install pip
-2. install django
-3. install sqlite3
+Dev:
+install pip
+pip install django
+apt install sqlite3
 
-server:
+server: (ubuntu 14.40)
 install pip
 pip install django==1.7
 apt install python-dev
 apt install sqlite3
-pip installuwsgi
+pip install uwsgi
 apt install nginx
 	make nginx conf file
 apt install git
@@ -15,8 +16,10 @@ make .bash_profile
 	add dir to pythonpath. 
 
 to run server 
-	stop nginx
-	uwsgi http :80 --wsgi-file /path/to/wsgi.py 
+	#this is the bible: 
+		http://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
+	restart nginx
+	uwsgi --socket :8001 --wsgi-file /home/kmcbrayer_com/com/wsgi.py 
 
 to update repo
 	git pull origin develop

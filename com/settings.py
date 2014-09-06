@@ -85,6 +85,6 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
 #static for dev
 STATIC_URL = "/static/"
 #static for prod
-STATIC_ROOT = "/home/kmcbrayer_com/static"
+STATIC_ROOT = "/home/static"
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

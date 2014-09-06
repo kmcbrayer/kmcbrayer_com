@@ -82,9 +82,9 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+#static for dev
 STATIC_URL = "/static/"
+#static for prod
+STATIC_ROOT = "/home/kmcbrayer_com/static"
 
-STATICFILES_DIRS = (
-                    os.path.join(BASE_DIR, 'static'),
-                    '/home/kmcbrayer_com/static',
-                    )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

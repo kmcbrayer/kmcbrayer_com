@@ -1,3 +1,13 @@
 1. install pip
 2. install django
 3. install sqlite3
+
+server:
+install pip
+pip install django==1.7
+apt install python-dev
+apt install sqlite3
+pip installuwsgi
+apt install nginx
+	make nginx conf file
+apt install git

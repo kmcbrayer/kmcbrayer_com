@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'kmcbrayer_com.urls'
+ROOT_URLCONF = 'com.urls'
 
-WSGI_APPLICATION = 'kmcbrayer_com.wsgi.application'
+WSGI_APPLICATION = 'com.wsgi.application'
 
 
 # Database

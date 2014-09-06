@@ -17,3 +17,6 @@ make .bash_profile
 to run server 
 	stop nginx
 	uwsgi http :80 --wsgi-file /path/to/wsgi.py 
+
+to update repo
+	git pull origin develop

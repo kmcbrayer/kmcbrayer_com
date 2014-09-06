@@ -11,3 +11,9 @@ pip installuwsgi
 apt install nginx
 	make nginx conf file
 apt install git
+make .bash_profile
+	add dir to pythonpath. 
+
+to run server 
+	stop nginx
+	uwsgi http :80 --wsgi-file /path/to/wsgi.py 

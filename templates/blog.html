@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blog-header">
+  <h1 class="blog-title">My Programming Blog</h1>
+  <p class="lead blog-description">This is just a list of my thoughts on programming stuff I run into</p>
+</div>
+<div class="col-sm-8 blog-main">
+{% for blog in blogs %}
+	<div class="blog-post">
+		<h2 class="blog-post-title">{{blog.title}}</h2>
+		<p class="blog-post-meta">{{blog.pub_date}}</p>
+		{{blog.body | safe}}
+	</div>
+	
+{% endfor %}
+</div><!--blog-main-->
+{% endblock %}

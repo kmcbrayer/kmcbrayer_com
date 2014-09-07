@@ -1,0 +1,39 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kevin McBrayer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static "styles/main.css"%}">
+    <link rel="stylesheet" href="{% static "styles/blog.css"%}">
+    <link rel="stylesheet" href="{% static "styles/bootstrap.min.css"%}">
+
+  </head>
+  <body>
+  
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <h2 class="pull-left">Kevin McBrayer</h2>
+        <div class="span10">
+          <div class="row ">
+            <ul class="nav nav-pills pull-right">
+              <li><a href="/">Home</a></li>
+              <li><a href="https://github.com/kmcbrayer">Github</a></li>
+              <li><a href="http://www.linkedin.com/in/kevinmcbrayer/">LinkedIn</a></li>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+  </div>
+  </body>
+</html>

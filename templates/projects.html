@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-10">
+    <h1 class="page-header">
+      My Projects:
+      <small>well, really just the ones I'm excited about right now</small>
+    </h1>
+    <h2>
+      <a href="https://github.com/kmcbrayer/regUStrator">Regustrator</a>
+    </h2>
+    <p class="lead">
+        Tech: Angular, THREE.js, Grunt.js, Yeoman with angular-generator 
+    </p>
+    <p>
+    The project was an idea I had to use Angular directives to place 3 dimensional objects on a webpage with just HTML and a little JSON. I have some expierence with XNA and rendering 3D objects. So when I found <a href="http://threejs.org/">THREE.js</a> I got really excited. The purpose of the project was to abstract away the render loop elements, object creation, scene setup code into Angular directives. So instead of 50 or so lines of JavaScript you would end up with:
+    </p>
+    <pre><code><xmp>    <div class="window" ng-controller="MainCtrl">
+
+      <screen id="main_screen"></screen>
+      <camera></camera>
+
+      <box props="box2"></box>
+      <box options="{'x':3,'y':2,'z':3,'color':100}"></box>
+
+      <line props="line1"></line>
+      <line options="{'x1':0,'y1':-10,'x2':0,'y2':10}"></line>
+      <line options="{'x1':0,'z1':-10,'x2':0,'z2':10}"></line>
+
+      <triangle></triangle>
+      <plane></plane>
+
+      <text>This is text</text>
+
+      <renderer></renderer>
+    </div></xmp></code></pre>
+    <!--<img class="img-responsive" src="http://placehold.it/900x300" alt="">-->
+    <p>
+    So any object elements between "camera" and "renderer" get rendered on the page. The attributes "props" and "options" are the little JSON I mentioned earlier. Those two attributes roughly translate to external and inline styling respectivly. Props looks inside an angular service for a predefined json object with the matching name e.g. "box2". Options, as you can see, is just a stringified json object. 
+    </p>
+    <a class="btn btn-primary" href="/regUpreview">Live Demo<span class="glyphicon glyphicon-chevron-right"></span></a>
+    
+    <hr>
+
+    <h2>
+      <a href="https://github.com/kmcbrayer/regUStrator">Feeder</a>
+    </h2>
+    <p class="lead">
+        Tech: Node, Express, Angular, and a testing suite consisting of karma/jasmine with phantomJS. Lots of node-passport with social media APIs like FaceBook, Twitter, Google/Youtube, and Instagram.
+    </p>
+    <p>
+        The main purpose of this project is to consolidate several social media feeds. And in the future maybe news RSS feeds. All in chronological order. A really interesting problem I've run into is that the feeds typically are not integrated very uniformly. By nature, twitter will have more entries per hour than youtube video uploads. So I am looking forward to putting an algorithm in place to properly mix up and sort these feeds. I'm thinking a priority based system. Picture all those standardized tests where you know the next answer cant be C because the previous, like, 3 were so you pick B instead. I don't know yet. But I'm excited about it and am saving it for last, kind of a treat for finishing writing all the tests and directives.  
+    </p>
+    <p>
+        Perhaps one of my weak points as a web developer is mobile interactions. I will be using <a href="http://www.ng-newsletter.com/posts/angular-on-mobile.html">this guide</a> and <a href="https://github.com/wzr1337/angular-gestures">angular gestures</a> to add touch/swipe friendly functionality.
+    </p>
+    <p>
+        Something in this project I'm very proud of, and the single task that has taken the most time, is that I restructured a yeoman angular-fullstack app to comply with Angulars new <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">best practices</a>. It took alot of tinkering with the Gruntfile and bower_components location but I'm very happy with this new application organization. Putting all of the html, css, directives that apply to a particular page just feels right. 
+    </p>
+    <p>
+        SideNote* in the end it may have all been for naught because of sublimes Cmd+p/Ctrl+p function, but that might be an argument about naming convention vs. app configuration, that sounds like a good topic for my <a href="/blog/">Blog</a>
+    </p>
+    
+
+  </div><!-- end col -->
+</div><!-- end row -->
+{% endblock %}

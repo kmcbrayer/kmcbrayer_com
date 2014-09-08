@@ -1,0 +1,84 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kevin McBrayer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static "styles/main.css"%}">
+    <link rel="stylesheet" href="{% static "styles/blog-home.css"%}">
+    <link rel="stylesheet" href="{% static "styles/bootstrap.min.css"%}">
+
+  </head>
+  <body ng-app="regUstratorApp">
+
+<!--three js files -->
+<script src="{% static "scripts/jquery-1.11.0.js" %}"></script>
+<script src="{% static "scripts/three/three.js" %}"></script>
+<script src="{% static "scripts/three/helvetiker_regular.typeface.js" %}"></script>
+<script src="{% static "scripts/three/OrbitControls.js" %}"></script>
+<script src="{% static "scripts/three/PointerLockControls.js" %}"></script>
+{% include "navbar.html" %}
+<div id="alert" style="position: absolute;">ALL data was saved</div>
+{% verbatim %}
+<div id="window" ng-controller="MainCtrl">
+
+<screen id="main_screen"></screen>
+<camera></camera>
+
+<box props="box2"></box>
+<box options="{'x':3,'y':2,'z':3,'color':100}"></box>
+
+<line props="line1"></line>
+<line options="{'x1':0,'y1':-10,'x2':0,'y2':10}"></line>
+<line options="{'x1':0,'z1':-10,'x2':0,'z2':10}"></line>
+
+<triangle options="{'x1':-3,'x2':-6,'x3':0}"></triangle>
+
+<text>This is text</text>
+
+<renderer></renderer>
+</div>
+{% endverbatim %}
+
+<!-- controls popup -->
+<script type="text/javascript" >
+  //$('#window').append('<div id="alert" style="position: absolute; top:10px;left:10px;" >ALL data was saved</div>');
+  $('#alert').fadeOut('slow')
+</script>
+<!-- end controls popup -->
+
+<!-- angular main -->
+<script src="{% static "scripts/angular.js" %}"></script>
+
+<script src="{% static "scripts/angular_scripts/angular-route.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/angular-sanitize.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/app.js" %}"></script>
+
+<!-- angular app files -->
+<script src="{% static "scripts/angular_scripts/controllers/main.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/box.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/camera.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/line.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/plane.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/renderer.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/screen.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/text.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/triangle.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/boxService.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/drawobjs.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/lineService.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/objprops.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/planeservice.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/scenedata.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/textservice.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/triangleservice.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/utils.js" %}"></script>
+
+</body>
+</html>

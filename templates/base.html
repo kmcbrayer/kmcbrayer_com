@@ -11,29 +11,22 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="{% static "styles/main.css"%}">
-    <link rel="stylesheet" href="{% static "styles/blog.css"%}">
+    <link rel="stylesheet" href="{% static "styles/blog-home.css"%}">
     <link rel="stylesheet" href="{% static "styles/bootstrap.min.css"%}">
 
   </head>
   <body>
   
   <div class="container">
-    <div class="navbar">
-      <div class="navbar-inner">
-        <h2 class="pull-left">Kevin McBrayer</h2>
-        <div class="span10">
-          <div class="row ">
-            <ul class="nav nav-pills pull-right">
-              <li><a href="/">Home</a></li>
-              <li><a href="https://github.com/kmcbrayer">Github</a></li>
-              <li><a href="http://www.linkedin.com/in/kevinmcbrayer/">LinkedIn</a></li>
-              <li><a href="/blog/">Blog</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% include "navbar.html" %}
     {% block content %}{% endblock %}
   </div>
+  <script src="{% static "scripts/jquery-1.11.0.js" %}"></script>
+  <script src="{% static "scripts/bootstrap.min.js" %}"></script>
+  <script src="{% static "scripts/angular.js" %}"></script>
+
+
+  
+  
   </body>
 </html>

@@ -56,8 +56,7 @@ angular.module('regUstratorApp')
         sceneData.camera.position.x = 0;
         sceneData.camera.position.y = 3;
         sceneData.camera.position.z = 10;
-        
-        sceneData.controls = new THREE.OrbitControls(sceneData.camera);
+        sceneData.controls = new THREE.OrbitControls(sceneData.camera,document.getElementById('window'));
         
       },
       cleanCam: function(){

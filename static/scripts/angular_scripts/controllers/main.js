@@ -6,11 +6,11 @@ angular.module('regUstratorApp')
     $scope.toggleCamera = function(){
     	sceneData.cameraView = (sceneData.cameraView === 'perspective') ? 'fPerson' : 'perspective';
     	if (sceneData.cameraView === 'perspective'){
-            utils.cleanCam();
+        utils.cleanCam();
     		utils.makeOrbitCam();
     	}else{
     	  sceneData.controls = new THREE.PointerLockControls(sceneData.camera);
-            utils.makeFPersonCam();
+        utils.makeFPersonCam();
     	}
     };
   });

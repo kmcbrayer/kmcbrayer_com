@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-  <div class="span12">
+  <div class="col-md-10">
     <h1 class="page-header">
       My Projects:
       <small>well, really just the ones I'm excited about right now</small>
@@ -14,7 +14,7 @@
         Tech: Angular, THREE.js, Grunt.js, Yeoman with angular-generator 
     </p>
     <p>
-    The project was an idea I had to use Angular directives to place three dimensional objects on a webpage with just HTML and a little JSON. I have some expierence with XNA and rendering 3D objects from college courses. So when I found <a href="http://threejs.org/">THREE.js</a> I got really excited. The purpose of the project was to abstract away the render loop elements, object creation, and scene setup code into Angular directives. So instead of 50 or so lines of JavaScript you would end up with:
+    The project was an idea I had to use Angular directives to place 3 dimensional objects on a webpage with just HTML and a little JSON. I have some expierence with XNA and rendering 3D objects. So when I found <a href="http://threejs.org/">THREE.js</a> I got really excited. The purpose of the project was to abstract away the render loop elements, object creation, scene setup code into Angular directives. So instead of 50 or so lines of JavaScript you would end up with:
     </p>
     <pre><code><xmp>    <div class="window" ng-controller="MainCtrl">
 
@@ -51,13 +51,16 @@
     </p>
     <h4>warning: still a very rough project on the front end</h4>
     <p>
-        The main purpose of this project is to consolidate several social media feeds and display them on a central page in chronological order. This has allowed me to get familiar with Node/Express and node-passport.  A really interesting problem I've run into is that the feeds typically are not integrated very uniformly. By nature, twitter will have more entries per hour than youtube video uploads. So I am looking forward to putting an algorithm in place to properly mix up and sort these feeds.  
+        The main purpose of this project is to consolidate several social media feeds. And in the future maybe news RSS feeds. All in chronological order. A really interesting problem I've run into is that the feeds typically are not integrated very uniformly. By nature, twitter will have more entries per hour than youtube video uploads. So I am looking forward to putting an algorithm in place to properly mix up and sort these feeds. I'm thinking a priority based system. Picture all those standardized tests where you know the next answer cant be C because the previous, like, 3 were so you pick B instead. I don't know yet. But I'm excited about it and am saving it for last, kind of a treat for finishing writing all the tests and directives.  
     </p>
     <p>
-        Something in this project I'm very proud of, and the single task that has taken the most time, is that I restructured a yeoman angular-fullstack app to comply with Angulars new <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">best practices</a>. It took alot of tinkering with the Gruntfile and bower_components location (recursive inclusion while running tests) but I'm very happy with this new application organization. Putting all of the html, css, directives that apply to a particular page just feels right. 
+        Perhaps one of my weak points as a web developer is mobile interactions. I will be using <a href="http://www.ng-newsletter.com/posts/angular-on-mobile.html">this guide</a> and <a href="https://github.com/wzr1337/angular-gestures">angular gestures</a> to add touch/swipe friendly functionality.
     </p>
     <p>
-        Perhaps one of my weak points as a web developer is mobile interactions. I will be using <a href="http://www.ng-newsletter.com/posts/angular-on-mobile.html">this guide</a> and <a href="https://github.com/wzr1337/angular-gestures">angular gestures</a> to add touch/swipe functionality.
+        Something in this project I'm very proud of, and the single task that has taken the most time, is that I restructured a yeoman angular-fullstack app to comply with Angulars new <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">best practices</a>. It took alot of tinkering with the Gruntfile and bower_components location but I'm very happy with this new application organization. Putting all of the html, css, directives that apply to a particular page just feels right. 
+    </p>
+    <p>
+        SideNote* in the end it may have all been for naught because of sublimes Cmd+p/Ctrl+p function, but that might be an argument about naming convention vs. app configuration, that sounds like a good topic for my <a href="/blog/">Blog</a>
     </p>
     <a class="btn btn-primary" href="http://www.kmcbrayer.com:3000">Live Demo<span class="glyphicon glyphicon-chevron-right"></span></a>
     

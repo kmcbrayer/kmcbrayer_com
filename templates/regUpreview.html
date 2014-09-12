@@ -19,6 +19,7 @@
 
 <!--three js files -->
 <script src="{% static "scripts/jquery-1.11.0.js" %}"></script>
+<script src="{% static "scripts/textAreaUtil.js" %}"></script>
 <script src="{% static "scripts/three/three.js" %}"></script>
 <script src="{% static "scripts/three/helvetiker_regular.typeface.js" %}"></script>
 <script src="{% static "scripts/three/OrbitControls.js" %}"></script>
@@ -29,32 +30,18 @@
   <div ng-controller="MainCtrl" style="height:100%;">
     <div class="row" style="height:100%;">
       <div class="pull-left" style="width:25%;height:100%;">
-      {{textAreaString}}
         <div id="description">
-          <div>Click and drag to change the view. Enter html objects into the text area below.</div>
+          <div>Click and drag to move camera. Enter THREE.js elements like box,triangle,line, or text in the textarea below then click Render </div>
           <a class="btn btn-primary" ng-click="submitCode()">Render<span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
-        <textarea ng-model="textAreaString" style="width:100%;height:100%;">
+        <br>
+        <textarea id="textArea" ng-model="textAreaString" style="width:100%;height:100%;">
         </textarea>
       </div>
       
-      <div id="window" class="pull-left" style="width:75%;">
-
-        <screen id="main_screen"></screen>
-        <camera></camera>
-
-        <box props="box2"></box>
-        <box options="{'x':3,'y':2,'z':3,'color':100}"></box>
-
-        <line props="line1"></line>
-        <line options="{'x1':0,'y1':-10,'x2':0,'y2':10}"></line>
-        <line options="{'x1':0,'z1':-10,'x2':0,'z2':10}"></line>
-
-        <triangle options="{'x1':-3,'x2':-6,'x3':0}"></triangle>
-
-        <text>This is text</text>
-
-        <renderer></renderer>
+      <div id="window" class="pull-left" style="width:75%;" >
+        <render-window></render-window>
+        
       </div>
     </div>
   </div>
@@ -85,6 +72,7 @@
 <script src="{% static "scripts/angular_scripts/directives/screen.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/directives/text.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/directives/triangle.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/directives/renderWindow.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/boxService.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/drawobjs.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/lineService.js" %}"></script>
@@ -94,6 +82,7 @@
 <script src="{% static "scripts/angular_scripts/services/textservice.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/triangleservice.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/utils.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/textAreaService.js" %}"></script>
 
 </body>
 </html>

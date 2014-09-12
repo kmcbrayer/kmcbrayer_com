@@ -17,6 +17,7 @@ angular.module('regUstratorApp')
           props: utils.setProperties(scope,attrs),
           text: innerText
         });
+        element.hide()//need the elements innerhtml but dont need the element after that.
       }
     };
   });

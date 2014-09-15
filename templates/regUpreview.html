@@ -35,15 +35,33 @@
           <a class="btn btn-primary" ng-click="addElement()">Add<span class="glyphicon glyphicon-chevron-right"></span></a>
           <a class="btn btn-primary" ng-click="clearElements()">ClearAll<span class="glyphicon glyphicon-chevron-right"></span></a><br><br>
           <div ng-show="eleSelected.name == 'Box'">
-            <ul>
+            <ul id="boxOptions">
               <li ng-repeat="(key,value) in boxDefaults">
               {{key}}: <input class="ele_options" type="text" name="{{key}}" value="{{value}}"><br>
               </li>
             </ul>
           </div>
-          <div ng-show="eleSelected.name == 'Line'">Dis a line</div>
-          <div ng-show="eleSelected.name == 'Triangle'">Dis a triangle</div>
-          <div ng-show="eleSelected.name == 'Text'">Dis some text</div>
+          <div ng-show="eleSelected.name == 'Line'">
+            <ul id="lineOptions">
+              <li ng-repeat="(key,value) in lineDefaults">
+              {{key}}: <input class="ele_options" type="text" name="{{key}}" value="{{value}}"><br>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="eleSelected.name == 'Triangle'">
+            <ul id="triangleOptions">
+              <li ng-repeat="(key,value) in triangleDefaults">
+              {{key}}: <input class="ele_options" type="text" name="{{key}}" value="{{value}}"><br>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="eleSelected.name == 'Text'">
+            <ul id="textOptions">
+              <li ng-repeat="(key,value) in textDefaults">
+              {{key}}: <input class="ele_options" type="text" name="{{key}}" value="{{value}}"><br>
+              </li>
+            </ul>
+          </div>
 
           <a class="btn btn-primary" ng-click="submitCode()">Render<span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
@@ -97,6 +115,9 @@
 <script src="{% static "scripts/angular_scripts/services/utils.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/textAreaService.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/boxDefaults.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/lineDefaults.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/triangleDefaults.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/textDefaults.js" %}"></script>
 
 </body>
 </html>

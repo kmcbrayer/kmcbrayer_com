@@ -13,6 +13,7 @@ angular.module('regUstratorApp')
     return {
       newText: function(text, props){
         var textProperties = {
+          'text':'default',
           'font':'helvetiker',
           'size':2,
           'height':0.13,
@@ -33,6 +34,9 @@ angular.module('regUstratorApp')
               textProperties[key] = props[k];
             }
           }
+        }
+        if (text === undefined) {
+          text = textProperties.text;
         }
         var mat = new THREE.MeshBasicMaterial({
             color: textProperties.color

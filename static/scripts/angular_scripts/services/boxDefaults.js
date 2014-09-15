@@ -8,6 +8,6 @@ angular.module('regUstratorApp')
       'height':1,
       'width':1,
       'depth':1,
-      'color': 0x100
+      'color': 100
     }
   );

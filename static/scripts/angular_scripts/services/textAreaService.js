@@ -4,7 +4,7 @@ angular.module('regUstratorApp')
   .factory('textAreaService', function() {
   	var taString = "\
     <box props=\"box2\"></box>\n\
-    <box options=\"{'x':3,'y':2,'z':3,'color':100}\"></box>\n\
+    <box options=\"{'x':3,'y':2,'z':3,'color':200}\"></box>\n\
     <line props=\"line1\"></line>\n\
     <line options=\"{'x1':0,'y1':-10,'x2':0,'y2':10}\"></line>\n\
     <line options=\"{'x1':0,'z1':-10,'x2':0,'z2':10}\"></line>\n\

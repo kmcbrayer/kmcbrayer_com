@@ -19,7 +19,7 @@ to run server
 	#this is the bible: 
 		http://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
 	restart nginx
-	uwsgi --socket :8001 --wsgi-file /home/kmcbrayer_com/com/wsgi.py 
+	uwsgi --socket :8001 --wsgi-file com/wsgi.py 
 
 to update repo
 	git pull origin develop

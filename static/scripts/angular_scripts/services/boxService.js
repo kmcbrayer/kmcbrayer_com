@@ -11,8 +11,7 @@ angular.module('regUstratorApp')
           'height':1,
           'width':1,
           'depth':1,
-          'color': 0xEEEEEE,
-          'image': ""
+          'color': 0x991D4F
         };
         for (var key in boxProperties){
           for (var k in props){
@@ -22,16 +21,9 @@ angular.module('regUstratorApp')
           }
         }
         var geometry = new THREE.CubeGeometry(boxProperties.width,boxProperties.height,boxProperties.depth);
-        if (boxProperties.image === ""){
-          var material = new THREE.MeshBasicMaterial({
+        var material = new THREE.MeshBasicMaterial({
             'color' : boxProperties.color
           });
-        } else {
-          var material = new THREE.MeshBasicMaterial({
-            'color' : boxProperties.color,
-            'map': THREE.ImageUtils.loadTexture(boxProperties.image)
-          });
-        }
         var cube = new THREE.Mesh( geometry, material );
         cube.position.set(boxProperties.x,boxProperties.y,boxProperties.z);
         return cube;

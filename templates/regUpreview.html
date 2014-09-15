@@ -31,7 +31,20 @@
     <div class="row" style="height:100%;">
       <div class="pull-left" style="width:25%;height:100%;">
         <div id="description">
-          <div>Click and drag to move camera. Enter THREE.js elements like box,triangle,line, or text in the textarea below then click Render </div>
+          <select data-ng-options="ele.name for ele in eleList" data-ng-model="eleSelected"></select>
+          <a class="btn btn-primary" ng-click="addElement()">Add<span class="glyphicon glyphicon-chevron-right"></span></a>
+          <a class="btn btn-primary" ng-click="clearElements()">ClearAll<span class="glyphicon glyphicon-chevron-right"></span></a><br><br>
+          <div ng-show="eleSelected.name == 'Box'">
+            <ul>
+              <li ng-repeat="(key,value) in boxDefaults">
+              {{key}}: <input class="ele_options" type="text" name="{{key}}" value="{{value}}"><br>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="eleSelected.name == 'Line'">Dis a line</div>
+          <div ng-show="eleSelected.name == 'Triangle'">Dis a triangle</div>
+          <div ng-show="eleSelected.name == 'Text'">Dis some text</div>
+
           <a class="btn btn-primary" ng-click="submitCode()">Render<span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
         <br>
@@ -83,6 +96,7 @@
 <script src="{% static "scripts/angular_scripts/services/triangleservice.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/utils.js" %}"></script>
 <script src="{% static "scripts/angular_scripts/services/textAreaService.js" %}"></script>
+<script src="{% static "scripts/angular_scripts/services/boxDefaults.js" %}"></script>
 
 </body>
 </html>

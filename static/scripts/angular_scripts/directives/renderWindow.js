@@ -14,7 +14,6 @@ angular.module('regUstratorApp')
         elm.html(convertedText);
         $compile(elm.contents())(scope);
         scope.$on('textUpdated', function() {
-        	console.log('watch called')
         	var convertedText = "\
 	        <screen id=\"main_screen\"></screen>\n\
 	        <camera></camera>\n" +textAreaService.textAreaString +"\n\

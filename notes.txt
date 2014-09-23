@@ -23,3 +23,7 @@ to run server
 
 to update repo
 	git pull origin develop
+
+todos:
+  fix default text for text add
+  restyle left pannel for dynamic adding.

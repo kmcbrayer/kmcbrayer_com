@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('regUstratorApp')
-  .factory('drawObjs', function (objProps,boxService,lineService,triangleService,planeService,textService) {
+  .factory('drawObjs', function (boxService,lineService,triangleService,planeService,textService) {
     //this is for all objects to be drawn on 
     var ObjFactory = function(){};
 

@@ -1,1 +1,3 @@
-*.pyc
+com/*.pyc
+mysite/*.pyc
+db.sqlite3

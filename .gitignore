@@ -1,3 +1,4 @@
 com/*.pyc
 mysite/*.pyc
+mysite/**/*.pyc
 db.sqlite3

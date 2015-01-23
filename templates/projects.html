@@ -14,7 +14,7 @@
         Tech: Angular, THREE.js, Grunt.js, Yeoman with angular-generator 
     </p>
     <p>
-    The project was an idea I had to use Angular directives to place three dimensional objects on a webpage with just HTML and a little JSON. I have some expierence with XNA and rendering 3D objects from college courses. So when I found <a href="http://threejs.org/">THREE.js</a> I got really excited. The purpose of the project was to abstract away the render loop elements, object creation, and setup code Angular directives. So instead of 50 or so lines of JavaScript you would end up with:
+    The project was an idea I had to use Angular directives to place three dimensional objects on a webpage with just HTML and a little JSON. It uses <a href="http://threejs.org/">THREE.js</a> to do the actual renderin. The purpose of the project was to abstract away the render loop elements, object creation, and setup code and put them in Angular directives. So instead of 50 or so lines of JavaScript you would end up with:
     </p>
     <pre><code><xmp>    <div class="window" ng-controller="MainCtrl">
 
@@ -37,7 +37,7 @@
     </div></xmp></code></pre>
     <!--<img class="img-responsive" src="http://placehold.it/900x300" alt="">-->
     <p>
-    So any object elements between "camera" and "renderer" get rendered on the page. The attributes "props" and "options" are the little JSON I mentioned earlier. Those two attributes roughly translate to external and inline styling respectivly. Props looks inside an angular service for a predefined json object with the matching name e.g. "box2". Options, as you can see, is just a stringified json object. 
+    So any object elements between "camera" and "renderer" get rendered on the page. The attributes "props" and "options" roughly translate to external and inline styling respectivly. Props looks inside an angular service for a predefined json object with the matching name e.g. "box2". Options is just a stringified json object. 
     </p>
     <a class="btn btn-primary" href="/regUpreview">Live Demo<span class="glyphicon glyphicon-chevron-right"></span></a>
     
@@ -47,14 +47,10 @@
       <a href="https://github.com/kmcbrayer/regUStrator">Feeder</a>
     </h2>
     <p class="lead">
-        Tech: Node, Express, Angular, and a testing suite consisting of karma/jasmine with phantomJS. Lots of node-passport with social media APIs like FaceBook, Twitter, Google/Youtube, and Instagram.
-    </p>
-    <h4>warning: still a very rough project on the front end</h4>
-    <p>
-        The main purpose of this project is to consolidate several social media feeds. And in the future maybe news RSS feeds. All in chronological order. A really interesting problem I've run into is that the feeds typically are not integrated very uniformly. By nature, twitter will have more entries per hour than youtube video uploads. So I am looking forward to putting an algorithm in place to properly mix up and sort these feeds. I'm thinking a priority based system. Picture all those standardized tests where you know the next answer cant be C because the previous, like, 3 were so you pick B instead. I don't know yet. But I'm excited about it and am saving it for last, kind of a treat for finishing writing all the tests and directives.  
+        Tech: Node, Express, Angular, karma-jasmine-phantomJS, Grunt, and  node-passport with social media APIs like FaceBook, Twitter, Google/Youtube, and Instagram.
     </p>
     <p>
-        Something in this project I'm very proud of, and the single task that has taken the most time, is that I restructured a yeoman angular-fullstack app to comply with Angulars new <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">best practices</a>. It took alot of tinkering with the Gruntfile and bower_components location ( recursive inclusion while running karma tests) but I'm very happy with this new application organization. 
+        The main purpose of this project is to consolidate several social media feeds in chronological order. This is my first real go at a Node server and I found that all of the npm passport modules are pretty amazing. Logging is done with <a href="https://github.com/flatiron/winston">Winston JS</a> . <a href="http://gruntjs.com/">Grunt</a> and all of its plugins are great for tests and the live reload on save. This was my first expirence with this an I will never go back.  
     </p>
     <a class="btn btn-primary" href="http://www.kmcbrayer.com:3000">Live Demo<span class="glyphicon glyphicon-chevron-right"></span></a>
     

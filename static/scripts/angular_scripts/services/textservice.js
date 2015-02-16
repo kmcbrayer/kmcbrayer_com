@@ -23,7 +23,7 @@ angular.module('regUstratorApp')
           'bevelEnabled':false,
           'bevelThickness': 10,
           'bevelSize': 8,
-          'color': 0xdddddd,
+          'color': 0x606060,
           'x':0,
           'y':0,
           'z':0

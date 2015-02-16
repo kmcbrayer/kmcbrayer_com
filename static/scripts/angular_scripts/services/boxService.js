@@ -11,7 +11,7 @@ angular.module('regUstratorApp')
           'height':1,
           'width':1,
           'depth':1,
-          'color': 0x991D4F
+          'color': 0x24048d
         };
         for (var key in boxProperties){
           for (var k in props){

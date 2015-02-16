@@ -18,11 +18,18 @@ make .bash_profile
 to run server 
 	#this is the bible: 
 		http://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
-	restart nginx
+
+	restart nginx:
+    nginx -s stop
+    nginx -s reload
+
+  kill uwsgi: 
+    ps ax | grep uwsgi
+    kill <process #>
 	uwsgi --socket :8001 --wsgi-file com/wsgi.py 
 
 to update repo
-	git pull origin develop
+	git pull origin master
 
 todos:
   fix default text for text add

@@ -29,7 +29,8 @@ to run server
 	uwsgi --socket :8001 --wsgi-file com/wsgi.py 
 
 to update repo
-	git pull origin master
+	git pull
+	maybe python manage.py collectstatic
 
 todos:
   fix default text for text add

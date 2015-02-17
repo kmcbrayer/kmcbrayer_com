@@ -28,19 +28,29 @@
         </div>
     </nav>
 
-    <div class="blog-header">
-        <h1 class="blog-title">My Programming Blog</h1>
-        <p class="lead blog-description">This is just a list of my thoughts on programming stuff I run into</p>
-    </div>
-    <div class="span12 blog-main">
-        {% for blog in blogs %}
-        <div class="blog-post">
-            <h2 class="blog-post-title">{{blog.title}}</h2>
-            <p class="blog-post-meta">{{blog.pub_date}}</p>
-            {{blog.body | safe}}
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="page-header">
+                My Programming Blog
+            </h1>
+            <p class="lead">
+                Just a list of my thoughts on programming stuff I run into
+            </p>
+            {% for blog in blogs %}
+            <h2 class="blog-post-title">
+                {{blog.title}}
+            </h2>
+            <h5>
+                {{blog.pub_date}}
+            </h5>
+            <br>
+            <p>
+                {{blog.body | safe}}
+            </p>
+            <hr>
+            {% endfor %}
         </div>
-        <hr>
-        {% endfor %}
-    </div><!--blog-main-->
+    </div>
+
 </div>
 {% endblock %}

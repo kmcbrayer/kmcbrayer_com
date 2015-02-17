@@ -15,7 +15,9 @@ apt install git
 make .bash_profile
 	add dir to pythonpath. 
 
-to run server 
+to run server
+    development:
+        python manage.py runserver --settings=com.settings
 	#this is the bible: 
 		http://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
 

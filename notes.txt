@@ -22,8 +22,7 @@ to run server
 		http://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html
 
 	restart nginx:
-    nginx -s stop
-    nginx -s reload
+    service nginx restart
 
   kill uwsgi: 
     ps ax | grep uwsgi
